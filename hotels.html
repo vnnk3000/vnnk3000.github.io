@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>City Of Sedona|Hotels</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />	
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/symbols-sedona.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/screen.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ui.datepicker-ru.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header id="header">
+			<div id="logo" class="logo">
+				<a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+			</div>
+			<nav class="clearfix">
+				<ul class="header-menu clearfix">
+					<li><a href="#info">Информация</a></li>
+					<li><a href="img/gallery/00.jpg" rel="gallery1" class="fancybox">Фото и видео</a></li>
+					<div id="gallery">
+						<a class="fancybox" href="img/gallery/01.jpg" rel="gallery1">
+							<img src="img/gallery/01.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/02.jpg" rel="gallery1">
+							<img src="img/gallery/02.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/03.jpg" rel="gallery1">
+							<img src="img/gallery/03.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/04.jpg" rel="gallery1">
+							<img src="img/gallery/04.jpg">
+						</a>
+					</div>
+				</ul>
+				<ul class="header-menu header-menu__right clearfix">
+					<li><a href="#">Гостиница</a></li>
+					<li><a class="fancybox.iframe fancybox-media" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419091.56622218934!2d-111.91976691671364!3d34.85238621763944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1469795146643">Карта штата</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="selection clearfix">
+			<div class="selection-items">
+				<div class="selection-item">
+					<p>
+						ИНФРАСТРУКТУРА:
+					</p>
+					<div>
+						<input type="checkbox" class="option" value="pool" id="ch1">
+						<label for="ch1"><span></span>бассейн</label><br>
+						<input type="checkbox" class="option" value="parking" id="ch2">
+						<label for="ch2"><span></span>парковка</label><br>
+						<input type="checkbox" class="option" value="wifi" id="ch3">
+						<label for="ch3"><span></span>wi-fi</label>
+					</div>
+				</div>
+				<div class="selection-item">
+					<p>
+						тип жилья:
+					</p>
+					<div>
+						<input type="checkbox" class="type" value="hotel" id="ch4">
+						<label for="ch4"><span></span>гостиница</label><br>
+						<input type="checkbox" class="type" value="motel" id="ch5">
+						<label for="ch5"><span></span>мотель</label><br>
+						<input type="checkbox" class="type" value="apartments" id="ch6">
+						<label for="ch6"><span></span>апартаменты</label>
+					</div>
+				</div>
+				<div class="selection-item selection-item__price">
+					<p>
+						Стоимость в сутки (Р):
+					</p>
+					<div class="price-slider">
+						<div class="ranges clearfix">
+							<div class="ranges-item"><span>ОТ </span><span id='minPrice'></span></div>
+							<div class="ranges-item"><span>ДО </span><span id='maxPrice'></span></div>
+							<div class="ranges-selector"></div>
+						</div>
+						<div class="trackbar-wrap">
+							<div id="slider-range"></div>
+						</div>
+						<a href="#" class="btn">Показать</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sort clearfix">
+			<div class="sort-items">
+				<div class="sort-title">
+					<p>Найдено: <span class="sort-title-sum"></span></p>
+				</div>
+				<div class="sort-content clerfix">
+					<p>Сoртировка:</p>
+					<ul class="clearfix">
+						<li class="sort-item"><a href="#" id="price">по цене</a></li>
+						<li class="sort-item"><a href="#" id="type">по типу</a></li>
+						<li class="sort-item"><a href="#" id="rank">по рейтингу</a></li>
+					</ul>
+				</div>
+				<div class="sort-angles">
+					<i class="icon-up-dir"></i>
+					<i class="icon-down-dir"></i>
+				</div>
+			</div>
+		</div>
+		<div class="cat-list">
+			<div class="cat-list-item-wrap" data-value="hotel, pool, parking, wifi" data-price="3500" data-type="hotel" data-rank="8.5">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img  class="preview" src="img/amara_135x90.jpg" alt="Amara Resort & Spa">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Amara Resort & Spa</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>гостиница</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>3500</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>8,5</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery2" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery2" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery2" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery2" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="motel, parking"  data-price="2000" data-type="motel" data-rank="8.9">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/quail_135x90.jpg" class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Desert Quail Inn</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>мотель</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>2000</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>8,9</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Камера хранения багажа</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery">
+						<a href="img/gallery/hotel01_.jpg" rel="gallery3" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery3" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery3" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="apartments, pool, parking, wifi" data-price="4000" data-type="apartments" data-rank="9.2">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/poco_135x90.jpg" class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Villas at Poco Diablo</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>Апартаменты</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>4000</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>9,2</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel02.jpg" rel="gallery4" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery4" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery4" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="apatments, pool, wifi" data-price="4200" data-type="apartments" data-rank="9.4">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/170128_94_z_135x90.jpg"   class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>L'Auberge de Sedona</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>Апартаменты</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>4200</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>9,4</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery5" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery5" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery5" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery5" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="hotel, pool, parking" data-price="4000" data-type="hotel" data-rank="9.0">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/bellrock_135x90.jpg"   class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Bell Rock Inn by Diamond Resorts</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>гостиница</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>4000</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>9,0</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery6" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery6" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery6" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery6" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="apartments, parking, wifi" data-price="3800" data-type="apartments" data-rank="8.8">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/rouge_135x90.jpg"   class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Sedona Rouge Hotel And Spa</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>Апартаменты</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>3800</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>8,8</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery7 class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery7 class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery7 class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery7 class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="motel, parking, wifi" data-price="4100" data-type="motel" data-rank="9.0">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/wildflower_135x90.jpg" class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Wildflower Inn</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>мотель</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>4100</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>9,0</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery8" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery8" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery8" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery8" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="apartments, pool, parking, wifi" data-price="4700" data-type="apartments" data-rank="9.5">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img class="preview" src="img/hilton_135x90.jpg" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Hilton Sedona Resort at Bell Rock</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>Апартаменты</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>4700</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>9,5</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery9" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery9" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery9" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery9" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="cat-list-item-wrap" data-value="hotel, parking, wifi" data-price="3700" data-type="hotel" data-rank="8.5">
+				<div class="cat-list-item clearfix">
+					<div class="cat-image">
+						<img src="img/orch_135x90.jpg" class="preview" alt="">
+					</div>
+					<div class="cat-description">
+						<div class="cat-about">
+							<div class="cat-about-title">
+								<h3>Baza Otdyha of Sedona</h3>
+							</div>
+							<div class="cat-about-items clearfix">
+								<div class="cat-about-item">
+									<p>гостиница</p>
+									<a href="#" class="btn btn__blue btn__description">подробнее</a>
+								</div>
+								<div class="cat-about-item">
+									<p class="price-item">от <span>3700</span> р.</p>
+									<a href="#" class="btn btn__brown">забронировать</a>
+								</div>
+							</div>
+				
+						</div>
+						<div class="cat-rank">
+							<div class="cat-rank-stars">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+							</div>
+							<div class="cat-rank-text">
+								<p>рейтинг: <span>8,5</span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-list-item-description clearfix">
+					<div class="description-items">
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>На свежем воздухе</h3>
+								<ul>
+									<li>Барбекю</li>
+									<li>Сад</li>
+									<li>Терраса</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Домашние животные</h3>
+								<p>
+									Размещение домашних животных не допускается.
+								</p>
+							</div>
+							<div>
+								<h3>Питание и напитки</h3>
+								<ul>
+									<li>
+										Ресторан
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="description-item-row clearfix">
+							<div>
+								<h3>Парковка</h3>
+								<p>Частная парковка на месте (требуется предварительный заказ) предоставляется за дополнительную плату</p>
+							</div>
+							<div>
+								<h3>Сервисы</h3>
+								<ul>
+									<li>Круглосуточная стойка регистрации</li>
+									<li>Экскурсионное бюро</li>
+									<li>Камера хранения багажа</li>
+									<li>Индивидуальная регистрация заезда/отъезда</li>
+									<li>Ежедневная уборка номера</li>
+									<li>Конференц-зал/банкетный зал</li>
+								</ul>
+							</div>
+							<div>
+								<h3>Общие</h3>
+								<ul>
+									<li>Мини-маркет на территории</li>
+									<li>Номера для некурящих</li>
+									<li>Кондиционер</li>
+									<li>Места для курения</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="description-gallery clearfix">
+						<a href="img/gallery/hotel01.jpg" rel="gallery10" class="fancybox"><img src="img/gallery/hotel01_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel02.jpg" rel="gallery10" class="fancybox"><img src="img/gallery/hotel02_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel03.jpg" rel="gallery10" class="fancybox"><img src="img/gallery/hotel03_200x133.jpg" alt=""></a>
+						<a href="img/gallery/hotel04.jpg" rel="gallery10" class="fancybox"><img src="img/gallery/hotel04_200x133.jpg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hotel-search">
+			<div class="hotel-search-form hotel-search-form-modal">
+				<a href="#" class="btn__close">
+					<i class="icon-plus"></i>
+				</a>
+				<div class="hotel-search-form-items">
+					<div class="hotel-search-form-row clearfix">
+						<p>Дата заезда:</p>
+						<form class="clearfix">
+							<input type="text" id="datepicker1" value="выберите дату заезда"><i class="icon-calendar" aria-hidden="true"></i>
+						</form>
+					</div>
+					<div class="hotel-search-form-row clearfix">
+						<p>Дата выезда:</p>
+						<form class="clearfix">
+							<input type="text" id="datepicker2"  value="выберите дату выезда"><i class="icon-calendar" aria-hidden="true"></i>
+						</form>
+					</div>
+					<div class="hotel-search-form-row clearfix">
+						<div class="hotel-search-form-row-col">
+							<div>
+								<p>Взрослые:</p>
+								<form action="">
+									<input type="text" value="0">
+									<i class="icon-minus"></i>
+									<i class="icon-plus"></i>
+								</form>
+							</div>
+						</div>
+						<div class="hotel-search-form-row-col">
+							<div>
+								<p class="child">Дети:</p>
+								<form action="">
+									<input type="text" value="0">
+									<i class="icon-minus"></i>
+									<i class="icon-plus"></i>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn btn__blue">забронировать</a>
+			</div>
+		</div>
+		<footer>
+			<div class="footer-content clearfix">
+				<div class="footer-link">
+					<a href="#">#visitsedona</a>
+				</div>
+				<div class="footer-social">
+					<a href="#" class="social-item">
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" class="social-item">
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" class="social-item">
+						<i class="icon-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<a href="#" class="toTheTop">
+			<i class="fa fa-angle-up" aria-hidden="true"></i>
+		</a>
+	</div>
+	<script src="js/start.js"></script>
+</body>
+</html>

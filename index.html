@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>City Of Sedona|Main</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/symbols-sedona.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" href="css/plugin.css">
+	<link rel="stylesheet" href="css/screen.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.ui.datepicker-ru.js"></script>
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyDjBY-SCTDh4WJ_TWBLAphrQAQJfE2jfxo"></script>
+</head>
+<body>
+	<div class="wrap">
+		<header id="header">
+			<div id="logo" class="logo">
+				<a href="#"><img src="img/logo.png" alt="Logo"></a>
+			</div>
+			<nav class="clearfix">
+				<ul class="header-menu clearfix">
+					<li><a href="#info">Информация</a></li>
+					<li><a id="single-0" href="img/gallery/00.jpg" rel="gallery1" class="fancybox">Фото и видео</a></li>
+					<div id="gallery">
+						<a class="fancybox" href="img/gallery/01.jpg" rel="gallery1">
+							<img src="img/gallery/01.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/02.jpg" rel="gallery1">
+							<img src="img/gallery/02.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/03.jpg" rel="gallery1">
+							<img src="img/gallery/03.jpg">
+						</a>
+						<a class="fancybox" href="img/gallery/04.jpg" rel="gallery1">
+							<img src="img/gallery/04.jpg">
+						</a>
+					</div>
+				</ul>
+				<ul class="header-menu header-menu__right clearfix">
+					<li><a href="#hotel">Гостиница</a></li>
+					<li><a href="#map_canvas">Карта штата</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="title">
+			<div class="title-text">
+				<img src="img/text.png" alt="">
+			</div>
+			<div class="title-decoration"></div>
+		</div>
+		<div id="info" class="info">
+			<div class="info-about">
+				<h3>СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h3>
+				<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+			</div>
+			<div class="info-items info-items__blue clearfix">
+				<div class="info-item info-item__blue">
+					<h3>НАСТОЯЩИЙ<br>ГОРОДОК</h3>
+					<p class="number">— №1 —</p>
+					<p>СЕДОНА НЕ АтТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
+				</div>
+				<div class="info-bg">
+					<div class="slider1">
+						<img src="img/00.jpg" alt="">
+						<img src="img/03.jpg" alt="">
+						<img src="img/06.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="info-items clearfix">
+				<div class="info-item info-item__white">
+					<i class="icon icon-house"></i>
+					<h3>Жилье</h3>
+					<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+				</div>
+				<div class="info-item info-item__white">
+					<i class="icon icon-burger"></i>
+					<h3>ЕДА</h3>
+					<p>Всегда заказывай ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+				</div>
+				<div class="info-item info-item__white">
+					<i class="icon icon-gift"></i>
+					<h3>СУВЕНИРЫ</h3>
+					<p>Не только китайского, но и местного производства!</p>
+				</div>
+			</div>
+			<div class="info-items info-items__blue clearfix">
+				<div class="info-bg">
+					<div class="slider2">
+						<img src="img/01.jpg" alt="">
+						<img src="img/04.jpg" alt="">
+						<img src="img/05.jpg" alt="">
+					</div>
+				</div>
+				<div class="info-item info-item__blue">
+					<h3>ТАМ ЕСТЬ<br>Мост дьявола</h3>
+					<p class="number">— №2 —</p>
+					<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+				</div>
+			</div>
+			<div class="info-items info-items__grey clearfix">
+				<div class="info-item info-item__grey">
+					<h3>НЕБОЛЬШАЯ<br>ПЛОЩАДЬ</h3>
+					<p class="number">— №3 —</p>
+					<p>ВСЕ достопримеча-<br>тельности находятся очень близко</p>
+				</div>
+				<div class="info-item info-item__grey">
+					<h3>КРАСИВАЯ<br>ДОРОГА</h3>
+					<p class="number">— №4 —</p>
+					<p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
+				</div>
+				<div class="info-item info-item__grey">
+					<h3>МАЛО<br>ТУРИСТОВ</h3>
+					<p class="number">— №5 —</p>
+					<p>Большинство едет в гранд каньон и толпится там</p>
+				</div>
+			</div>
+		</div>
+		<div id="hotel" class="hotel">
+			<h2>
+				ЗАИНТЕРЕСОВАЛИСЬ?
+			</h2>
+			<p>
+				Укажите предполагаемые даты поездки<br>и мы покажем вам лучшие предложения гостиниц в седоне
+			</p>
+			<div class="hotel-search">
+				<a class="btn btn__brown" href="#">
+					ПОИСК ГОСТИНИЦЫ В седоне
+				</a>
+				<div class="hotel-search-form hidden">
+					<div class="hotel-search-form-items">
+						<div class="hotel-search-form-row clearfix">
+							<p>Дата заезда:</p>
+							<form class="clearfix">
+								<input type="text" id="datepicker1" value="выберите дату заезда"><i class="icon-calendar" aria-hidden="true"></i>
+							</form>
+						</div>
+						<div class="hotel-search-form-row clearfix">
+							<p>Дата выезда:</p>
+							<form class="clearfix">
+								<input type="text" id="datepicker2"  value="выберите дату выезда"><i class="icon-calendar" aria-hidden="true"></i>
+							</form>
+						</div>
+						<div class="hotel-search-form-row clearfix">
+							<div class="hotel-search-form-row-col">
+								<div>
+									<p>Взрослые:</p>
+									<form action="">
+										<input type="text" value="0">
+										<i class="icon-minus"></i>
+										<i class="icon-plus"></i>
+									</form>
+								</div>
+							</div>
+							<div class="hotel-search-form-row-col">
+								<div>
+									<p class="child">Дети:</p>
+									<form action="">
+										<input type="text" value="0">
+										<i class="icon-minus"></i>
+										<i class="icon-plus"></i>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="hotels.html" class="btn btn__blue">Найти</a>
+				</div>
+			</div>
+		</div>
+		<div id="map_canvas" class="map">
+		</div>
+		<footer>
+			<div class="footer-content clearfix">
+				<div class="footer-link">
+					<a href="#">#visitsedona</a>
+				</div>
+				<div class="footer-social">
+					<a href="#" class="social-item">
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" class="social-item">
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" class="social-item">
+						<i class="icon-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<a href="#" class="toTheTop">
+			<i class="fa fa-angle-up" aria-hidden="true"></i>
+		</a>
+	</div>
+	<script src="js/start.js"></script>
+	<script src="js/plugin.js"></script>
+</body>
+</html>
